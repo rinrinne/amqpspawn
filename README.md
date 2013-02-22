@@ -52,7 +52,7 @@ Usage: amqpspawn [options]
        Default: false
     -q, --queue
        Queue name
-       Default: geb
+       Default: ger
     -k, --routingkey
        Routing key
        Default: gerrit.event.*
