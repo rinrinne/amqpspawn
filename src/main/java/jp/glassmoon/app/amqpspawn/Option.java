@@ -28,6 +28,8 @@ public class Option {
 	private String consumerTag = DEFAULT_TAG;
 	@Parameter(names = { "-p", "--passive" }, description = "Do not create the queue if it doesn't exist")
 	private boolean passive;
+	@Parameter(names = { "-n", "--nospawn" }, description = "Create queue only then exit")
+	private boolean nospawn;
 	
 	public boolean isHelp() {
 		return this.help;
@@ -55,4 +57,8 @@ public class Option {
 	public boolean isPassive() {
 		return this.passive;
 	}
+
+  public boolean isNoSpawn() {
+    return this.nospawn;
+  }
 }

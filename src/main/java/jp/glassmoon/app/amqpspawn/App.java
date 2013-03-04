@@ -42,6 +42,11 @@ public class App
             if(!opt.isPassive()) {
             	channel.queueDeclare(queueName, true, false, false, null);
             	channel.queueBind(queueName,  exchangeName, routingKey);
+              System.out.println("Queue created: " + queueName);
+            }
+
+            if(opt.isNoSpawn()) {
+              return;
             }
             
             channel.basicConsume(queueName, false, consumerTag,
