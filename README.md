@@ -47,6 +47,9 @@ Usage: amqpspawn [options]
     -h, --help
        Display this help
        Default: false
+    -n, --nospawn
+       Create queue only then exit
+       Default: false
     -p, --passive
        Do not create the queue if it doesn't exist
        Default: false
